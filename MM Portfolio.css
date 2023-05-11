@@ -11,11 +11,11 @@ nav {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-        justify-content: space-between;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background:  #2C3333;
+  background: #2C3333;
   color: #7dce13;
   padding: 1rem;
 }
@@ -52,10 +52,6 @@ nav {
   margin: 0.5rem;
   margin-top: 0%;
   border-radius: 16px;
-  justify-content: space-between;
-}
-.aboutContainer p{
-  padding-left: 20px;
 }
  #imageabout {
   width: 300px;
@@ -63,8 +59,14 @@ nav {
   border-radius: 16px;
  }
 html {
-  background-color:  #2C3333;
-  scroll-behavior: smooth;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #2C3333;
+}
+html {
+   scroll-behavior: smooth;
 }
 .logodiv {
   display: -webkit-box;
@@ -222,6 +224,7 @@ html {
   display: inline-block;
   color: #c7e9b0;
   background-image: url("bodybackground.jpg");
+  background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -276,18 +279,16 @@ nav a {
           align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
-  justify-content: end;
 }
 /* CSS for burger menu */
-  .burger {
+.burger {
   display: none;
 }
 .burger-menu.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 2rem;
-  border-radius: 16px;
+  padding-bottom: 1rem;
 }
 .burger-menu {
   display: none;
@@ -370,10 +371,6 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-footer a:hover {
- text-decoration: underline #482ff7 2px;
 }
 
 .container {
@@ -499,26 +496,18 @@ a {
   padding: 2rem;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  margin-top: 2rem;
 }
-
-.main-content h1 p {
-   display: flex;
-   justify-content: space-around;
-   padding: 1rem;
-}
-
 /* CSS for responsiveness */
 @media only screen and (max-width: 768px) {
   nav ul {
     display: none;
   }
-   .burger-menu.active {
-    display: flex;
-    flex-direction: column;
-  }
   .burger {
     display: block;
+    cursor: pointer;
+  }
+  .burger-menu {
+    display: none;
   }
 }
 @media only screen and (min-width: 769px) {
@@ -533,104 +522,3 @@ a {
 }
 
 
-.hamburger {
-  display: none;
-}
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: #7dce13;
-}
-
-@media only screen and (max-width: 768px) {
-  .nav-menu {
-      position: fixed;
-      left: -100%;
-      top: 5rem;
-      flex-direction: column;
-      color: #482ff7;
-      background: #2C3333;
-      z-index: 5;
-      width: 100%;
-      border-radius: 10px;
-      text-align: center;
-      transition: 0.3s;
-      background-color: #12bcda;
-    background: -webkit-gradient(linear, right top, left top, from(#eae7b1), to(#c7e9b0));
-     background: -o-linear-gradient(right, #eae7b1, #c7e9b0);
-     background: linear-gradient(to left, #eae7b1, #c7e9b0);
-     color: #fff;
-     font-size: large;
-     font-family: Arial, Helvetica, sans-serif;
-      box-shadow:
-          0 10px 27px rgba(0, 0, 0, 0.05);
-  }
-
-  .nav-menu.active {
-      left: 0;
-  }
-
-  .nav-item {
-    margin: 2.5rem 0;
-}
-
-  .hamburger {
-      display: block;
-      cursor: pointer;
-  }
-
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(405deg);
-}
-
-.hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-405deg);
-}
-
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-}
-
-.nav-link a{
-    color: #7dce13;
-    font-size: large;
-    font-weight: bold;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-  }
-
-
-  .nav-link:hover {
-    text-decoration: underline #7dce13 2px;
-  }
-  
-  .nav-link {
-    color: #7dce13;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 10px 20px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .nav-link:hover {
-    color: #482ff7;
-    background-color: #fff;
-    transition: all 0.3s ease-in-out;
-    border-radius: 5px;
-  }
